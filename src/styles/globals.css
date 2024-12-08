@@ -2,20 +2,132 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.animate {
+  animation: dash 1s linear;
+}
+
+@keyframes moveLightX {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes moveLightY {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 320;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.hover-scale {
+  transition: transform 0.8s ease-in ;
+  transform-origin: center;
+  cursor: pointer;
+}
+
+.hover-scale {
+  transform: scale(1.2);
+}
+
+
+@keyframes slideIn {
+  0% {
+    transform: scale(0); /* Start tiny */
+    opacity: 0; /* Invisible at the start */
+  }
+  100% {
+    transform: scale(1); /* Grow to full size */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+/* Circle animation */
+.animate-in {
+  transform-origin: center; /* Ensures it scales from the center */
+  animation: slideIn 2s ease-in forwards; /* Apply animation */
+}
+
+server-cluster {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+/* Hover effect */
+.server-cluster:hover {
+  transform: scale(1.05); /* Slightly scale up */
+  cursor: pointer;
+}
+
+/* Optional: Add a subtle animation that pulsates the glow on hover */
+.server-cluster:hover {
+  animation: pulse 1s infinite;
+}
+
+/* Pulse animation keyframes */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(0, 123, 255, 1);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+}
+#hero {
+  padding-top: 90px;
+}
+
+#intro, #projects, #experience {
+  padding-top: 130px;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+::-webkit-scrollbar {
+  width: 10px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff66a5, #c13584); /* Stylish gradient */
+  border-radius: 8px; /* Smooth rounded corners */
+}
+
+::-webkit-scrollbar-track {
+  background: #f3e8e0; /* Match the background color of your page */
+  border-radius: 8px;
+}
+
+/* For Firefox */
+html {
+  scrollbar-width: thin; /* Use a thin scrollbar */
+  scrollbar-color: #c13584 #f3e8e0; /* Thumb color and track color */
+}
+
+/* Additional adjustments for hover effects */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ff4780, #a12d63); /* Slightly darker gradient on hover */
 }

@@ -1,0 +1,80 @@
+.card {
+    background: linear-gradient(145deg, #ffffff, #f3f3f3); /* Clean gradient background */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    border-radius: 20px; /* Rounded corners for elegance */
+    padding: 40px;
+    width: 80%; /* Consistent card width relative to viewport */
+    max-width: 900px; /* Prevents cards from being too wide */
+    height: 80%; /* Consistent card height relative to viewport */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  
+  .card h2 {
+    margin-bottom: 16px;
+    font-size: 2.5rem; /* Large, bold heading */
+  }
+  
+  .innerCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+  }
+  
+  .image {
+    margin-top: 20px;
+    width: 100%; /* Image takes full width of the card */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 12px; /* Rounded edges for images */
+  }
+  
+  .list {.card {
+    background: linear-gradient(145deg, #ffffff, #f3f3f3);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    height: auto; /* Dynamically adjusts height */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  
+  .card h2 {
+    margin-bottom: 16px;
+    font-size: 2.5rem;
+  }
+  
+  .innerCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+  }
+  
+  .image {
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+  
+  .list {
+    text-align: left;
+    margin-top: 16px;
+  }
+    text-align: left;
+    margin-top: 16px;
+  }
+  

@@ -11,6 +11,8 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "hero-gradient-start": "#1e293b",
+        "hero-gradient-end": "#0f172a",
       },
     },
   },
